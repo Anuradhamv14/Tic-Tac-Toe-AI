@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Luxury Neon Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Theme Toggle Fixed Button -->
+    <button id="global-theme-btn" class="theme-toggle-fab">☀️ LIGHT</button>
+
+    <!-- 🌟 Clean Neon Welcome Splash Screen -->
+    <div id="welcome-screen" class="screen-overlay">
+        <div class="welcome-container">
+            <p class="welcome-txt">Welcome to</p>
+            <h1 class="main-title">
+                <span class="neon-gold-text">TIC </span>
+                <span class="neon-cyan-text">TAC </span>
+                <span class="neon-red-text">TOE</span>
+            </h1>
+
+            <!-- ❌ REMOVED: .lava-frame wrapper is gone. Just the clean board preview now -->
+            <div class="preview-board">
+                <div class="p-cell custom-o">⭕</div>
+                <div class="p-cell"></div>
+                <div class="p-cell custom-x">❌</div>
+                <div class="p-cell"></div>
+                <div class="p-cell start-trigger" id="center-start-btn">START</div>
+                <div class="p-cell"></div>
+                <div class="p-cell custom-x">❌</div>
+                <div class="p-cell"></div>
+                <div class="p-cell custom-o">⭕</div>
+            </div>
+
+            <!-- Mode Action Controllers -->
+            <div class="menu-actions">
+                <button id="pvp-btn" class="menu-btn neon-blue-btn">
+                    <span class="btn-icon">👤</span> Play vs Player
+                </button>
+                <button id="pva-btn" class="menu-btn neon-purple-btn">
+                    <span class="btn-icon">🧠</span> Play vs AI
+                </button>
+            </div>
+            
+            <button id="instructions-btn" class="menu-btn neon-outline-btn">Instructions</button>
+            <p class="footer-prompt">Press Start to Begin</p>
+        </div>
+    </div>
+
+    <!-- Main Game Interface (Starts Hidden) -->
+    <div id="game-content" class="hidden">
+        <div class="top-header">
+            <h1 class="game-heading">
+                <span class="neon-gold-text">Tic </span>
+                <span class="neon-cyan-text">Tac </span>
+                <span class="neon-red-text">Toe</span>
+            </h1>
+            <div id="status">YOUR TURN (O)</div>
+        </div>
+
+        <div class="board-container">
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <div class="scoreboard-title">Scoreboard</div>
+        <div class="scoreboard">
+            <div class="capsule player">
+                <div class="header">👤 Player</div>
+                <div class="score" id="player-score">0</div>
+            </div>
+            <div class="capsule ai">
+                <div class="header" id="opponent-header">🤖 AI</div>
+                <div class="score" id="ai-score">0</div>
+            </div>
+            <div class="capsule draws">
+                <div class="header">⏳ Draws</div>
+                <div class="score" id="draws-score">0</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn">🔄 NEXT ROUND</button>
+            <button id="clear-score-btn">🧹 RESET SCORE</button>
+            <button id="back-to-menu-btn">🏠 MENU</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
